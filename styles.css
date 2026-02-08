@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Base / Reset
+   ========================================================================== */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  padding: 2rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Form layout
+   ========================================================================== */
+
+.accessible-form {
+  max-width: 360px;
+  margin: 0 auto 3rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.accessible-form + .accessible-form {
+  margin-top: 2.5rem;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+/* Inputs & Textarea */
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  font-size: 1rem;
+  border: 2px solid #6b7280;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  outline: none;
+}
+
+/* Error state */
+input.error,
+textarea.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+input.error:focus,
+textarea.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.9375rem;
+  margin-top: 0.45rem;
+}
+
+/* Buttons */
+button {
+  margin-top: 1.25rem;
+  padding: 0.7rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover,
+button:focus {
+  background-color: #2563eb;
+}
+
+button:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* Small accessibility tweak for textarea */
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
