@@ -150,3 +150,69 @@ textarea {
   outline: 2px solid #90caf9;
   outline-offset: 2px;
 }
+/* Select Birthdate */
+input {
+  padding: 8px 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: auto;
+}
+
+input[type="date"] {
+  padding: 6px 10px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Center the Birthdate form */
+form:has(#birthdate) {
+  max-width: 400px;        
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* Center using the existing .checkbox class */
+input.checkbox {
+  display: block;
+  margin: 12px auto;        /* centers horizontally + some vertical space */
+  width: 18px;
+  height: 18px;
+}
+
+input.checkbox + label {    /* targets the label right after the input */
+  display: block;
+  text-align: center;
+  margin-top: 4px;
+  font-size: 16px;
+}
+.agree-form {
+  text-align: center;          /* centers inline content */
+  margin: 20px auto;           /* vertical breathing room + horizontal centering */
+  max-width: 300px;            /* optional – keeps it from stretching too wide */
+}
+
+.agree-form label {
+  display: inline-flex;        /* best modern way: checkbox + text in one line */
+  align-items: center;         /* vertically aligns checkbox with text */
+  gap: 10px;                   /* space between box and "Agree" text */
+  cursor: pointer;             /* whole area clickable */
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 12px;           /* optional: makes hover area bigger */
+  border-radius: 6px;          /* optional: subtle feedback area */
+  transition: background 0.2s; /* optional: smooth hover */
+}
+
+.agree-form label:hover {
+  background-color: #f0f0f0;   /* optional: light hover effect */
+}
